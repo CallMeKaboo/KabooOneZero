@@ -5,23 +5,25 @@
 }
 
 .content__label{
-    padding: 16px 0;
+    padding: 12px 0 18px 0;
     display: flex;
     justify-content: space-between;
 }
 
 .content__main{
     background-color: #ffffff;
+    background-image: url(../../assets/img/4565.jpg);
+    background-size: auto;
 }
 
 .content__feature{
-    padding: 16px;
+    padding: 20px 16px 4px 16px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 }
 
-.content__feature>.input{
+.content__feature .input{
     width: 250px;
     margin-right: 10px;
 }
@@ -81,10 +83,15 @@
 }
 
 .content__table .table{
-    height: 680px;
+    height: calc(100vh - 261px);
 }
 
 .content__title{
     font-family: AMIS Fonts Bold;
     font-size: 24px;
 }
+
+.content__feature--right{
+    display: flex;
+}
+

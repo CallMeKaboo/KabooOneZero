@@ -5,6 +5,8 @@
     color: #ffffff;
     font-size: 13px;
     height: 100vh;
+    z-index: 15;
+    background-image: url(../../assets/img/ee20d23db8e79bb70d61abca731fa3a2.jpg);
 }
 
 .navigation__header{
@@ -57,5 +59,9 @@
     background-color: #58595D;
     border-left-color: #2ca01c;
     color: #ffffff;
+}
+
+.router-link-active .icon{
+    filter: brightness(3);
 }
 

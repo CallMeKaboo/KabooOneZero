@@ -1,12 +1,17 @@
 <template>
     <div class="navigation__left" :style="{width: isCloseNav ? '52px': '178px'}">
         <div class="navigation__header">
-            <div class="navigation__icon brn--5" :class="{'pdr--10':!isCloseNav}">
-                <div class="icon" :class="{'icon__toggle--header': isCloseNav, 'icon__toggle': !isCloseNav}" @click="openNav(isCloseNav)"></div>
+            <div class="brn--5" :class="{'navigation__icon':isCloseNav}">
+                <div class="icon" :class="{'icon__toggle--header': isCloseNav, 'dp--none': !isCloseNav}" @click="openNav(isCloseNav)"></div>
             </div>
             <div class="navigation__logo">
-                <img src="../../assets/img/Logo_Module_TiengViet_White.66947422.svg"
-                    class="logo" :class="{'dp--none':isCloseNav}">
+                <!-- <img src="../../assets/img/Logo_Module_TiengViet_White.66947422.svg"
+                    class="logo" :class="{'dp--none':isCloseNav}"/> -->
+                <div class="box-icon-header" :class="{'dp--none':isCloseNav}">
+                    <div class="icon-header"></div>
+                    <div>QLNS</div>
+                </div>
+                
             </div>
         </div>
         <div class="navigation__menu">
@@ -19,10 +24,14 @@
 import {listItemNav} from "../../JS/array.js";
 import BaseNavItem from "../base/BaseNavItem.vue";
 export default {
+    emits: ["is-opennav"],
     setup() {
         return {listItemNav};
     },
     props: {
+        /**
+         * Biến xác định đóng mở navigation
+         */
         isCloseNav: {
             type: Boolean,
             required: true,
@@ -32,6 +41,11 @@ export default {
         BaseNavItem,
     },
     methods: {
+        /**
+         * Hàm thực hiện mở nav
+         * @param {boolean} val biến điều kiện thu gọn navigation
+         * Author: Công Đoàn (15/07/2022)
+         */
         openNav(val){
             this.$emit('is-opennav',val);
         }
@@ -42,6 +56,4 @@ export default {
 
 <style lang="css">
     @import url(../../styles/base/nav.css);
-
-
 </style>
