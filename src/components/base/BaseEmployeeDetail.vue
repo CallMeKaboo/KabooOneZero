@@ -890,6 +890,7 @@ export default {
         /**
          * Hàm thực hiện validate date
          * @param {date} date biến lưu giá trị ngày tháng của employee
+         * @returns Giá trị đúng sai khi validate ngày đúng định dạng
          * Author: Công Đoàn (14/08/2022)
          */
 

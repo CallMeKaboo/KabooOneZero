@@ -12,6 +12,8 @@
 
 .content__main{
     background-color: #ffffff;
+    background-image: url(../../assets/img/4565.jpg);
+    background-size: auto;
 }
 
 .content__feature{
